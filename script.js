@@ -8,6 +8,19 @@ const closeModal = () => {
     document.getElementById('formulario').reset()
 }
 
+const tempClient = {
+    nome:"Paulo",
+    email:"paulo@gmail.com",
+    celular:"28999582264",
+    cidade:"Piúma"
+}
+
+//CRUD
+const createClient = (client) => { //setItem envia e Get recebe
+    localStorage.setItem("db_client", client)
+}
+
+
 // abrir modal
 document.getElementById('cadastrarCliente')
     .addEventListener('click', openModal)
@@ -16,5 +29,3 @@ document.getElementById('cadastrarCliente')
 Array.from(document.getElementsByClassName('modalClose')).forEach(x => {
     x.addEventListener('click', closeModal)
 })
-
-// prisma
